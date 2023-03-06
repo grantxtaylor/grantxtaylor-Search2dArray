@@ -9,7 +9,19 @@ public class Search2dArray {
      * @param target a value that may be contained within nums.
      * @return true if nums contains target, and false otherwise.
      */
-    public boolean search(int[][] nums, int target){
-        return false;
+    
+        public static boolean search(int[][] array, int value) {
+            // Iterate over each row
+            for (int i = 0; i < array.length; i++) {
+                // Iterate over each column in the current row
+                for (int j = 0; j < array[i].length; j++) {
+                    if (array[i][j] == value) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
     }
-}
+    
+
